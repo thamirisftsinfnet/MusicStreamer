@@ -1,0 +1,15 @@
+﻿using MusicStreamer.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MusicStreamer.Domain.Interfaces.Repositories
+{
+    public interface IMusicRepository : IRepository<Music>
+    {
+        Task<IEnumerable<Music>> SearchAsync(string searchTerm);
+        Task<IEnumerable<Music>> GetUserFavoritesAsync(int userId);
+    }
+}

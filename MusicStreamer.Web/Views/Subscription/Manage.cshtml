@@ -1,0 +1,38 @@
+﻿@model MusicStreamer.Web.Models.SubscriptionViewModel
+@{
+    ViewData["Title"] = "Gerenciar Assinatura";
+}
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="mb-3">💳 Sua Assinatura</h2>
+
+        <p><strong>Plano atual:</strong> @Model.CurrentPlan</p>
+        <p>
+            <strong>Status:</strong> <span class="badge bg-@((Model.IsActive ? "success" : "danger"))">
+                @(Model.IsActive ? "Ativo" : "Inativo")
+            </span>
+        </p>
+
+        <hr />
+
+        <h5>Alterar Plano:</h5>
+        <form method="post" asp-action="UpdatePlan">
+            <div class="mb-3">
+                <select asp-for="NewPlan" class="form-select">
+                    <option value="Free">Free - R$0,00</option>
+                    <option value="Premium">Premium - R$19,90</option>
+                    <option value="Family">Family - R$29,90</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Atualizar Plano</button>
+        </form>
+
+        @if (Model.IsActive)
+        {
+            <form method="post" asp-action="Cancel" class="mt-4">
+                <button type="submit" class="btn btn-outline-danger">Cancelar Assinatura</button>
+            </form>
+        }
+    </div>
+</div>

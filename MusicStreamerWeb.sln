@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Presentation", "1-Presentation", "{EBE80A3D-1C81-4659-8729-E482843EF5BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStreamer.Web", "MusicStreamer.Web\MusicStreamer.Web.csproj", "{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7876FBE-1D87-4B5E-9C0C-041803C79BAA} = {EBE80A3D-1C81-4659-8729-E482843EF5BE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {697B65A5-C812-4A6E-B192-BA9E871BE406}
+	EndGlobalSection
+EndGlobal

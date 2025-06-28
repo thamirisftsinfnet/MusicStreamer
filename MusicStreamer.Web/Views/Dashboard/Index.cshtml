@@ -1,0 +1,76 @@
+﻿@model MusicStreamer.Web.Models.DashboardViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow p-4">
+                <h2 class="mb-3">Bem-vindo, @Model.FirstName 👋</h2>
+                <p class="lead">Seu plano: <strong>@Model.SubscriptionPlan</strong></p>
+                <p>
+                    Status: <span class="badge bg-@((Model.IsSubscriptionActive ? "success" : "danger"))">
+                        @(Model.IsSubscriptionActive ? "Ativo" : "Inativo")
+                    </span>
+                </p>
+                <a asp-controller="Subscription" asp-action="Manage" class="btn btn-outline-primary mt-2">Gerenciar assinatura</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow p-3 mb-4">
+                <h4 class="mb-3">🎧 Músicas Favoritas</h4>
+                <ul class="list-group">
+                    @foreach (var music in Model.FavoriteMusics)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>@music.Title</strong><br />
+                                <small>@music.BandName - @music.AlbumTitle</small>
+                            </div>
+                            <a asp-controller="Music" asp-action="Details" asp-route-id="@music.Id" class="btn btn-sm btn-primary">▶</a>
+                        </li>
+                    }
+                    @if (!Model.FavoriteMusics.Any())
+                    {
+                        <li class="list-group-item">Nenhuma música favorita ainda.</li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow p-3 mb-4">
+                <h4 class="mb-3">🎸 Bandas Favoritas</h4>
+                <ul class="list-group">
+                    @foreach (var band in Model.FavoriteBands)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>@band.Name</strong><br />
+                                <small>@band.Description</small>
+                            </div>
+                            <a asp-controller="Band" asp-action="Details" asp-route-id="@band.Id" class="btn btn-sm btn-secondary">Ver</a>
+                        </li>
+                    }
+                    @if (!Model.FavoriteBands.Any())
+                    {
+                        <li class="list-group-item">Nenhuma banda favorita ainda.</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow p-4 mt-3 text-center">
+                <h4 class="mb-3">🔎 Procurar Músicas e Bandas</h4>
+                <a asp-controller="Search" asp-action="Index" class="btn btn-lg btn-success">Ir para busca</a>
+            </div>
+        </div>
+    </div>
+
+</div>

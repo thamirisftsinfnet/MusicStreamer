@@ -1,0 +1,66 @@
+﻿@model MusicStreamer.Web.Models.SearchViewModel
+@{
+    ViewData["Title"] = "Buscar Músicas e Bandas";
+}
+
+<div class="container mt-4">
+    <div class="card shadow p-4">
+        <h2 class="mb-4">🔎 Buscar</h2>
+        <form method="get" asp-action="Index">
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" name="term" value="@Model.SearchTerm" placeholder="Digite o nome da música ou banda...">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        </form>
+
+        @if (Model.Musics.Count > 0 || Model.Bands.Count > 0)
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Músicas</h5>
+                    <ul class="list-group mb-4">
+                        @foreach (var m in Model.Musics)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>@m.Title</strong><br />
+                                    <small>@m.BandName - @m.AlbumTitle</small>
+                                </div>
+                                <form asp-action="ToggleFavoriteMusic" method="post">
+                                    <input type="hidden" name="musicId" value="@m.Id" />
+                                    <button class="btn btn-sm @(m.IsFavorite ? "btn-danger" : "btn-outline-primary")">
+                                        @(m.IsFavorite ? "Desfavoritar" : "Favoritar")
+                                    </button>
+                                </form>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Bandas</h5>
+                    <ul class="list-group">
+                        @foreach (var b in Model.Bands)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>@b.Name</strong><br />
+                                    <small>@b.Description</small>
+                                </div>
+                                <form asp-action="ToggleFavoriteBand" method="post">
+                                    <input type="hidden" name="bandId" value="@b.Id" />
+                                    <button class="btn btn-sm @(b.IsFavorite ? "btn-danger" : "btn-outline-secondary")">
+                                        @(b.IsFavorite ? "Desfavoritar" : "Favoritar")
+                                    </button>
+                                </form>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+        else
+        {
+            <p>Nenhum resultado encontrado.</p>
+        }
+    </div>
+</div>

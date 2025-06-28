@@ -1,0 +1,32 @@
+﻿@model MusicStreamer.Web.Models.MusicDetailViewModel
+@{
+    ViewData["Title"] = "Ouvir Música";
+}
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="@Model.AlbumCoverUrl" class="img-fluid rounded mb-3" alt="Capa do álbum">
+            </div>
+            <div class="col-md-8">
+                <h2>@Model.Title</h2>
+                <p><strong>Banda:</strong> @Model.BandName</p>
+                <p><strong>Álbum:</strong> @Model.AlbumTitle</p>
+                <p><strong>Duração:</strong> @Model.Duration</p>
+
+                <audio controls class="w-100">
+                    <source src="@Model.FileUrl" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+
+                <form asp-action="ToggleFavorite" method="post" class="mt-3">
+                    <input type="hidden" name="musicId" value="@Model.Id" />
+                    <button class="btn btn-sm @(Model.IsFavorite ? "btn-danger" : "btn-outline-primary")">
+                        @(Model.IsFavorite ? "Desfavoritar" : "Favoritar")
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

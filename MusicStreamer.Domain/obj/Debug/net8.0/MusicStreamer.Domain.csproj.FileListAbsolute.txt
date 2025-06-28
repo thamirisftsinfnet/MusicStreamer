@@ -1,0 +1,11 @@
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Domain.AssemblyInfoInputs.cache
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Domain.AssemblyInfo.cs
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Domain.csproj.CoreCompileInputs.cache
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\bin\Debug\net8.0\MusicStreamer.Domain.deps.json
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\bin\Debug\net8.0\MusicStreamer.Domain.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\bin\Debug\net8.0\MusicStreamer.Domain.pdb
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Domain.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\refint\MusicStreamer.Domain.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Domain.pdb
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\ref\MusicStreamer.Domain.dll
