@@ -3,6 +3,7 @@ using MusicStreamer.Web.Models;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using static MusicStreamer.Web.Controllers.DashboardController;
 
 namespace MusicStreamer.Web.Controllers
 {
@@ -48,10 +49,10 @@ namespace MusicStreamer.Web.Controllers
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = await _httpClient.PutAsync($"/api/subscriptions/{userId}/plan", content);
-
             if (!response.IsSuccessStatusCode)
             {
-                TempData["Error"] = "Erro ao atualizar o plano.";
+                var errorMessage = await response.Content.ReadAsStringAsync();
+                TempData["Error"] = $"Erro: {errorMessage}";
                 return RedirectToAction("Manage");
             }
             var authResponse = await _httpClient.PostAsync($"/api/auth/renew?userId={userId}", null);
@@ -66,7 +67,7 @@ namespace MusicStreamer.Web.Controllers
 
             return RedirectToAction("Manage", model);
         }
-
+       
 
         [HttpPost]
         public async Task<IActionResult> Cancel()

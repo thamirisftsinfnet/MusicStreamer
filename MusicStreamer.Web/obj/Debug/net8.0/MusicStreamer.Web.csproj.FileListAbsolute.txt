@@ -31,3 +31,4 @@ C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Debug\net8.0\MusicStreamer.Web.pdb
 C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Debug\net8.0\MusicStreamer.Web.genruntimeconfig.cache
 C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Debug\net8.0\ref\MusicStreamer.Web.dll
 C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Debug\net8.0\MusicStreamer.Web.sourcelink.json

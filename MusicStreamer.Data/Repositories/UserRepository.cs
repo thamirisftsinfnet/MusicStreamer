@@ -32,5 +32,10 @@ namespace MusicStreamer.Data.Repositories
                 .Include(u => u.Subscription)
                 .FirstOrDefaultAsync(u => u.Id == userId);
         }
+        public async Task<bool> HasCreditCardAsync(int userId)
+        {
+            return await _context.CreditCards.AnyAsync(c => c.UserId == userId);
+        }
+
     }
 }

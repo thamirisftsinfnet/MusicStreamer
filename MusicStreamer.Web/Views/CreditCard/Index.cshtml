@@ -1,0 +1,47 @@
+﻿@model List<MusicStreamer.Web.Models.CreditCard>
+@{
+    ViewData["Title"] = "Meus Cartões";
+}
+<div class="container mt-5">
+    <h2 class="mb-4">💳 Meus Cartões de Crédito</h2>
+
+    @if (TempData["OK"] != null)
+    {
+        <div class="alert alert-success">@TempData["OK"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <a asp-action="Create" class="btn btn-primary mb-3">Adicionar Novo Cartão</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nome no Cartão</th>
+                <th>Número</th>
+                <th>Validade</th>
+                <th>Bandeira</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var card in Model)
+            {
+                <tr>
+                    <td>@card.CardHolderName</td>
+                    <td>@card.NumberMasked</td>
+                    <td>@card.Expiration</td>
+                    <td>@card.Brand</td>
+                    <td>
+                        <form asp-action="Delete" method="post">
+                            <input type="hidden" name="id" value="@card.Id" />
+                            <button type="submit" class="btn btn-sm btn-danger">Remover</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

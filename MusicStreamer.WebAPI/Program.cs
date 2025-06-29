@@ -104,7 +104,8 @@ builder.Services.AddScoped<IMusicRepository, MusicRepository>();
 builder.Services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
 builder.Services.AddScoped<IUserFavoriteBandRepository, UserFavoriteBandRepository>();
 builder.Services.AddScoped<IAlbumRepository, AlbumRepository>();
-//builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+builder.Services.AddScoped<ICreditCardRepository, CreditCardRepository>();
 
 // Service Registration
 builder.Services.AddScoped<IAuthService, AuthService>();
@@ -113,6 +114,8 @@ builder.Services.AddScoped<IBandService, BandService>();
 builder.Services.AddScoped<IMusicService, MusicService>();
 builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<ICreditCardService, CreditCardService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
 
 // Unit of Work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

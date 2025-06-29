@@ -13,3 +13,4 @@ C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Debug\net8.0\MusicStreamer
 C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Debug\net8.0\refint\MusicStreamer.Application.dll
 C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Debug\net8.0\MusicStreamer.Application.pdb
 C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Debug\net8.0\ref\MusicStreamer.Application.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Debug\net8.0\MusicStreamer.Application.sourcelink.json

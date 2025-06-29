@@ -1,0 +1,30 @@
+﻿@model MusicStreamer.Web.Models.TransactionAuthorizeViewModel
+@{
+    ViewData["Title"] = "Autorizar Transação";
+}
+<div class="container mt-5">
+    <h2 class="mb-4">Autorizar Transação</h2>
+
+    <form asp-action="Authorize" method="post">
+        <input type="hidden" asp-for="TransactionId" />
+
+        <div class="mb-3">
+            <label asp-for="SelectedCardId" class="form-label">Selecione um Cartão</label>
+            <select asp-for="SelectedCardId" class="form-select">
+                <option value="">-- Selecione --</option>
+                @if (Model.AvailableCards != null)
+                {
+                    foreach (var card in Model.AvailableCards)
+                    {
+                        <option value="@card.Id">
+                            @card.Brand - @card.NumberMasked (venc: @card.Expiration)
+                        </option>
+                    }
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Autorizar</button>
+        <a asp-controller="Transaction" asp-action="History" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

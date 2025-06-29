@@ -35,6 +35,13 @@ namespace MusicStreamer.Application.Services
 
             return SendEmailAsync(transaction.User.Email, subject, body);
         }
+        public Task SendTransactionPendenteNotificationAsync(Transaction transaction)
+        {
+            var subject = $"Transação Pendente - {transaction.MerchantName}";
+            var body = $"Olá,\n\nUma transação foi realizada no valor de R$ {transaction.Amount} com o comerciante {transaction.MerchantName}.\n\nData: {transaction.CreatedAt}\n\nCódigo: {transaction.AuthorizationCode}";
+
+            return SendEmailAsync(transaction.User.Email, subject, body);
+        }
 
         private async Task SendEmailAsync(string to, string subject, string body)
         {

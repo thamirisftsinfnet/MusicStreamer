@@ -1,0 +1,96 @@
+﻿@model MusicStreamer.Web.Models.TransactionHistoryViewModel
+@{
+    ViewData["Title"] = "Histórico de Transações";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Histórico de Transações</h2>
+
+    @if (TempData["OK"] != null)
+    {
+        <div class="alert alert-success">@TempData["OK"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h4>⏳ Pendente de Autorização</h4>
+            @if (!Model.Pending.Any())
+            {
+                <p class="text-muted">Nenhuma transação pendente.</p>
+            }
+            else
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var tx in Model.Pending)
+                        {
+                            <tr>
+                                <td>@tx.Description</td>
+                                <td>R$ @tx.Amount</td>
+                                <td>@tx.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>
+                                    <a asp-controller="Transaction" asp-action="Authorize" asp-route-id="@tx.Id" class="btn btn-sm btn-success">
+                                        Autorizar
+                                    </a>
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h4>📄 Transações Recentes</h4>
+            @if (!Model.Others.Any())
+            {
+                <p class="text-muted">Nenhuma transação registrada.</p>
+            }
+            else
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Status</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var tx in Model.Others)
+                        {
+                            <tr>
+                                <td>@tx.Description</td>
+                                <td>R$ @tx.Amount</td>
+                                <td>
+                                    <span class="badge bg-@(
+                                          tx.Status == "Authorized" ? "success" :
+                                          tx.Status == "Denied" ? "danger" : "secondary")">
+                                @tx.Status
+                            </span>
+                        </td>
+                        <td>@tx.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                    </tr>
+                                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>

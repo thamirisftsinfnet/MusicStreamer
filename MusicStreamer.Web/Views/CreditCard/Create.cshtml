@@ -1,0 +1,36 @@
+﻿@model MusicStreamer.Web.Models.CreditCardViewModel
+@{
+    ViewData["Title"] = "Adicionar Cartão";
+}
+<div class="container mt-5">
+    <h2 class="mb-4">Novo Cartão</h2>
+
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label asp-for="CardHolderName" class="form-label">Nome no Cartão</label>
+            <input asp-for="CardHolderName" class="form-control" />
+            <span asp-validation-for="CardHolderName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Number" class="form-label">Número</label>
+            <input asp-for="Number" class="form-control" maxlength="16" />
+            <span asp-validation-for="Number" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Expiration" class="form-label">Validade (MM/AA)</label>
+            <input asp-for="Expiration" class="form-control" />
+            <span asp-validation-for="Expiration" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Brand" class="form-label">Bandeira</label>
+            <input asp-for="Brand" class="form-control" />
+            <span asp-validation-for="Brand" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

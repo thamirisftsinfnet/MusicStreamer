@@ -7,6 +7,7 @@
         public bool IsSubscriptionActive { get; set; }
         public List<MusicDto> FavoriteMusics { get; set; } = new();
         public List<BandDto> FavoriteBands { get; set; } = new();
+        public List<TransactionListItemViewModel> PendingTransactions { get; set; } = new();
     }
 
     public class MusicDto

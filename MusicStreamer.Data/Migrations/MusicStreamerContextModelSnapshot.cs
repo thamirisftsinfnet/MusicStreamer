@@ -219,8 +219,14 @@ namespace MusicStreamer.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("AuthorizedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("CreditCardId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -237,6 +243,8 @@ namespace MusicStreamer.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CreditCardId");
 
                     b.HasIndex("UserId");
 
@@ -320,6 +328,44 @@ namespace MusicStreamer.Data.Migrations
                     b.ToTable("UserFavoriteMusics");
                 });
 
+            modelBuilder.Entity("MusicStreamer.Domain.ValueObjects.CreditCard", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Brand")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardHolderName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Expiration")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumberMasked")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CreditCards");
+                });
+
             modelBuilder.Entity("MusicStreamer.Domain.Entities.Album", b =>
                 {
                     b.HasOne("MusicStreamer.Domain.Entities.Band", "Band")
@@ -385,11 +431,18 @@ namespace MusicStreamer.Data.Migrations
 
             modelBuilder.Entity("MusicStreamer.Domain.Entities.Transaction", b =>
                 {
+                    b.HasOne("MusicStreamer.Domain.ValueObjects.CreditCard", "CreditCard")
+                        .WithMany()
+                        .HasForeignKey("CreditCardId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.HasOne("MusicStreamer.Domain.Entities.User", "User")
                         .WithMany("Transactions")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("CreditCard");
 
                     b.Navigation("User");
                 });
@@ -432,6 +485,17 @@ namespace MusicStreamer.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("MusicStreamer.Domain.ValueObjects.CreditCard", b =>
+                {
+                    b.HasOne("MusicStreamer.Domain.Entities.User", "User")
+                        .WithMany("CreditCards")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("MusicStreamer.Domain.Entities.Album", b =>
                 {
                     b.Navigation("Musics");
@@ -458,6 +522,8 @@ namespace MusicStreamer.Data.Migrations
 
             modelBuilder.Entity("MusicStreamer.Domain.Entities.User", b =>
                 {
+                    b.Navigation("CreditCards");
+
                     b.Navigation("FavoriteBands");
 
                     b.Navigation("FavoriteMusics");

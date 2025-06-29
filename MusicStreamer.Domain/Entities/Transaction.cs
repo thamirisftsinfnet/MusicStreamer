@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MusicStreamer.Domain.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,10 @@ namespace MusicStreamer.Domain.Entities
         public string AuthorizationCode { get; set; }
         public string Description { get; set; }
         public virtual User User { get; set; }
+        public DateTime? AuthorizedAt { get; set; }
+        public int? CreditCardId { get; set; }  
+        public CreditCard? CreditCard { get; set; }
+
     }
 
     public enum TransactionStatus

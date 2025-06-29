@@ -18,16 +18,19 @@ namespace MusicStreamer.Application.AppServices
         private readonly IUserRepository _userRepository;
         private readonly INotificationService _notificationService;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ITransactionService _transactionService;
 
         public SubscriptionService(
             ISubscriptionRepository subscriptionRepository,
             IUserRepository userRepository,
             INotificationService notificationService,
+            ITransactionService transactionService,
             IUnitOfWork unitOfWork)
         {
             _subscriptionRepository = subscriptionRepository;
             _userRepository = userRepository;
             _notificationService = notificationService;
+            _transactionService = transactionService;
             _unitOfWork = unitOfWork;
         }
 
@@ -39,6 +42,13 @@ namespace MusicStreamer.Application.AppServices
 
             if (user.IsActive)
                 throw new InvalidOperationException("Usuário já possui uma assinatura ativa");
+
+            if (createSubscriptionDto.PlanType != SubscriptionPlanType.Free)
+            {
+                var hasCards = await _userRepository.HasCreditCardAsync(user.Id);
+                if (!hasCards)
+                    throw new InvalidOperationException("Você precisa cadastrar um cartão para assinar esse plano.");
+            }
 
             var monthlyFee = GetMonthlyFeeByPlanType(createSubscriptionDto.PlanType);
 
@@ -54,6 +64,19 @@ namespace MusicStreamer.Application.AppServices
             await _subscriptionRepository.AddAsync(subscription);
             await _unitOfWork.CommitAsync();
 
+            if (createSubscriptionDto.PlanType != SubscriptionPlanType.Free)
+            {
+                var authDto = new AuthorizeTransactionDto
+                {
+                    UserId = createSubscriptionDto.UserId,
+                    Amount = monthlyFee,
+                    MerchantName = "MusicStreamer",
+                    Description = $"Assinatura do plano {createSubscriptionDto.PlanType}"
+                };
+
+                await _transactionService.AddTransactionAsync(authDto);
+            }
+
             return new SubscriptionDto
             {
                 Id = subscription.Id,
@@ -64,6 +87,7 @@ namespace MusicStreamer.Application.AppServices
                 MonthlyFee = subscription.MonthlyFee
             };
         }
+
 
         public async Task<SubscriptionDto> GetUserSubscriptionAsync(int userId)
         {
@@ -88,8 +112,28 @@ namespace MusicStreamer.Application.AppServices
             if (subscription == null)
                 throw new InvalidOperationException("Usuário não possui assinatura ativa");
 
+            if (newPlanType != SubscriptionPlanType.Free)
+            {
+                var hasCard = await _userRepository.HasCreditCardAsync(userId);
+                if (!hasCard)
+                    throw new InvalidOperationException("Você precisa cadastrar um cartão antes de mudar para este plano.");
+            }
+
             subscription.PlanType = newPlanType;
             subscription.MonthlyFee = GetMonthlyFeeByPlanType(newPlanType);
+
+            if (newPlanType != SubscriptionPlanType.Free)
+            {
+                var authDto = new AuthorizeTransactionDto
+                {
+                    UserId = subscription.UserId,
+                    Amount = subscription.MonthlyFee,
+                    MerchantName = "MusicStreamer",
+                    Description = $"Alteração de plano para {newPlanType}"
+                };
+
+                await _transactionService.AddTransactionAsync(authDto);
+            }
 
             await _unitOfWork.CommitAsync();
 
@@ -103,6 +147,8 @@ namespace MusicStreamer.Application.AppServices
                 MonthlyFee = subscription.MonthlyFee
             };
         }
+
+
 
         public async Task CancelSubscriptionAsync(int userId)
         {

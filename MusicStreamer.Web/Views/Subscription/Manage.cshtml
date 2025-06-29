@@ -13,9 +13,9 @@
                 @(Model.IsActive ? "Ativo" : "Inativo")
             </span>
         </p>
-
+        <a asp-controller="CreditCard" asp-action="Index" class="btn btn-outline-secondary mt-2">Gerenciar Cartões</a>
         <hr />
-
+        
         <h5>Alterar Plano:</h5>
         <form method="post" asp-action="UpdatePlan">
             <div class="mb-3">
@@ -27,12 +27,5 @@
             </div>
             <button type="submit" class="btn btn-primary">Atualizar Plano</button>
         </form>
-
-        @if (Model.IsActive)
-        {
-            <form method="post" asp-action="Cancel" class="mt-4">
-                <button type="submit" class="btn btn-outline-danger">Cancelar Assinatura</button>
-            </form>
-        }
     </div>
 </div>

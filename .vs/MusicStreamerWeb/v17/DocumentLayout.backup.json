@@ -3,24 +3,88 @@
   "WorkspaceRootPath": "C:\\Infnet\\MusicStreamer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\transactionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\models\\transactionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\controllers\\creditcardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\controllers\\creditcardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\creditcardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\models\\creditcardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\transaction\\authorize.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\transaction\\authorize.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\creditcard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\creditcard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\creditcard\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\creditcard\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\musicdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\models\\musicdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\models\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\controllers\\subscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\controllers\\subscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\subscription\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\subscription\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\transaction\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\transaction\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\search\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\search\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\models\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,22 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\subscriptionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\models\\subscriptionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\music\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\music\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\models\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\models\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|c:\\infnet\\musicstreamer\\musicstreamer.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7876FBE-1D87-4B5E-9C0C-041803C79BAA}|MusicStreamer.Web\\MusicStreamer.Web.csproj|solutionrelative:musicstreamer.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,119 +110,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SearchController.cs",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\SearchController.cs",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Controllers\\SearchController.cs",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\SearchController.cs",
-              "RelativeToolTip": "MusicStreamer.Web\\Controllers\\SearchController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwCIAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T21:45:33.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AccountViewModel.cs",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\AccountViewModel.cs",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\AccountViewModel.cs",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\AccountViewModel.cs",
-              "RelativeToolTip": "MusicStreamer.Web\\Models\\AccountViewModel.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAswCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T19:34:15.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "MusicStreamer.Web\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-28T19:21:29.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SubscriptionController.cs",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\SubscriptionController.cs",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Controllers\\SubscriptionController.cs",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\SubscriptionController.cs",
-              "RelativeToolTip": "MusicStreamer.Web\\Controllers\\SubscriptionController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAuwD0AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T20:17:27.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "MusicStreamer.Web\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAADQAAAAMAAAAAAAAAA==",
+              "Title": "TransactionViewModel.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\TransactionViewModel.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\TransactionViewModel.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\TransactionViewModel.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Models\\TransactionViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T20:14:09.196Z",
+              "WhenOpened": "2025-06-29T20:52:42.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "MusicStreamer.Web\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-28T20:13:49.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SearchViewModel.cs",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\SearchViewModel.cs",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\SearchViewModel.cs",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\SearchViewModel.cs",
-              "RelativeToolTip": "MusicStreamer.Web\\Models\\SearchViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Controllers\\TransactionController.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Controllers\\TransactionController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T21:43:20.482Z",
+              "WhenOpened": "2025-06-29T12:30:46.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "SubscriptionViewModel.cs",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\SubscriptionViewModel.cs",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\SubscriptionViewModel.cs",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\SubscriptionViewModel.cs",
-              "RelativeToolTip": "MusicStreamer.Web\\Models\\SubscriptionViewModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIA8wBYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T20:22:46.24Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\CreditCard\\Index.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\CreditCard\\Index.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\CreditCard\\Index.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\CreditCard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-29T13:28:55.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:21:45.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Authorize.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Transaction\\Authorize.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Transaction\\Authorize.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Transaction\\Authorize.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\Transaction\\Authorize.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-29T12:31:32.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Music\\Details.cshtml",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Music\\Details.cshtml",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Music\\Details.cshtml",
-              "RelativeToolTip": "MusicStreamer.Web\\Views\\Music\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\CreditCard\\Create.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\CreditCard\\Create.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\CreditCard\\Create.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\CreditCard\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-28T20:16:16.523Z",
+              "WhenOpened": "2025-06-29T13:29:28.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreditCardViewModel.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\CreditCardViewModel.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\CreditCardViewModel.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\CreditCardViewModel.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Models\\CreditCardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:10:17.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreditCardController.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\CreditCardController.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Controllers\\CreditCardController.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\CreditCardController.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Controllers\\CreditCardController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADgvxgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:26:07.98Z",
               "EditorCaption": ""
             },
             {
@@ -187,21 +222,177 @@
               "RelativeToolTip": "MusicStreamer.Web\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T20:11:15.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T20:11:15.964Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "MusicStreamer.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-28T19:21:45.3Z",
+              "Title": "SearchController.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\SearchController.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Controllers\\SearchController.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\SearchController.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Controllers\\SearchController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAEwBsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T21:45:33.798Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T20:14:09.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAkwEQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T12:35:29.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MusicDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\MusicDetailViewModel.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\MusicDetailViewModel.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\MusicDetailViewModel.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Models\\MusicDetailViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:27:39.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\DashboardViewModel.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Models\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:03:07.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "JwtHelper.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\JwtHelper.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\JwtHelper.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\JwtHelper.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Models\\JwtHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:27:06.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T20:13:49.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Subscription\\Manage.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Subscription\\Manage.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Subscription\\Manage.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\Subscription\\Manage.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-29T12:32:46.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Transaction\\History.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Transaction\\History.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Transaction\\History.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\Transaction\\History.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAADwv1MAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-29T13:00:35.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:21:29.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Search\\Index.cshtml",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Views\\Search\\Index.cshtml",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Views\\Search\\Index.cshtml",
+              "RelativeToolTip": "MusicStreamer.Web\\Views\\Search\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T22:23:44.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AccountViewModel.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\AccountViewModel.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\AccountViewModel.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\AccountViewModel.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Models\\AccountViewModel.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAswCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T19:34:15.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SearchViewModel.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\SearchViewModel.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\SearchViewModel.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\SearchViewModel.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Models\\SearchViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T21:43:20.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SubscriptionViewModel.cs",
+              "DocumentMoniker": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\SubscriptionViewModel.cs",
+              "RelativeDocumentMoniker": "MusicStreamer.Web\\Models\\SubscriptionViewModel.cs",
+              "ToolTip": "C:\\Infnet\\MusicStreamer\\MusicStreamer.Web\\Models\\SubscriptionViewModel.cs",
+              "RelativeToolTip": "MusicStreamer.Web\\Models\\SubscriptionViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIA8wBYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T20:22:46.24Z"
             }
           ]
         }

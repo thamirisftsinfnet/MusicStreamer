@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MusicStreamer.Domain.Entities;
-using System;
+using MusicStreamer.Domain.ValueObjects;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
@@ -23,6 +23,7 @@ namespace MusicStreamer.Data.Context
         public DbSet<PlaylistMusic> PlaylistMusics { get; set; }
         public DbSet<UserFavoriteMusic> UserFavoriteMusics { get; set; }
         public DbSet<UserFavoriteBand> UserFavoriteBands { get; set; }
+        public DbSet<CreditCard> CreditCards { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,8 +34,12 @@ namespace MusicStreamer.Data.Context
                 entity.Property(e => e.FirstName).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.LastName).IsRequired().HasMaxLength(100);
                 entity.HasIndex(e => e.Email).IsUnique();
-            });
 
+                entity.HasMany(u => u.CreditCards)
+                      .WithOne(c => c.User)  
+                      .HasForeignKey(c => c.UserId)
+                      .OnDelete(DeleteBehavior.Restrict);
+            });
 
             modelBuilder.Entity<Band>(entity =>
             {
@@ -42,7 +47,6 @@ namespace MusicStreamer.Data.Context
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(200);
                 entity.HasIndex(e => e.Name);
             });
-
 
             modelBuilder.Entity<Album>(entity =>
             {
@@ -52,7 +56,6 @@ namespace MusicStreamer.Data.Context
                       .WithMany(b => b.Albums)
                       .HasForeignKey(e => e.BandId);
             });
-
 
             modelBuilder.Entity<Music>(entity =>
             {
@@ -81,34 +84,46 @@ namespace MusicStreamer.Data.Context
                       .HasForeignKey<Subscription>(e => e.UserId);
             });
 
-
             modelBuilder.Entity<Transaction>(entity =>
             {
                 entity.HasKey(e => e.Id);
-
-                modelBuilder.Entity<Transaction>(entity =>
-                {
-                    entity.HasKey(e => e.Id);
-                    entity.Property(e => e.Amount).HasPrecision(18, 2);
-                    entity.HasOne(e => e.User)
-                          .WithMany(u => u.Transactions)
-                          .HasForeignKey(e => e.UserId);
-                });
                 entity.Property(e => e.Amount).HasPrecision(18, 2);
+
                 entity.HasOne(e => e.User)
                       .WithMany(u => u.Transactions)
-                      .HasForeignKey(e => e.UserId);
+                      .HasForeignKey(e => e.UserId)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(e => e.CreditCard)
+                      .WithMany()
+                      .HasForeignKey(e => e.CreditCardId)
+                      .OnDelete(DeleteBehavior.SetNull);
             });
+
+            modelBuilder.Entity<CreditCard>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.CardHolderName).IsRequired();
+                entity.Property(e => e.NumberMasked).IsRequired();
+                entity.Property(e => e.Expiration).IsRequired();
+                entity.Property(e => e.Brand).IsRequired();
+                entity.Property(e => e.Token).IsRequired();
+            });
+
 
             modelBuilder.Entity<PlaylistMusic>(entity =>
             {
-                entity.HasKey(e => new { e.PlaylistId, e.MusicId });
+                entity.HasKey(e => new
+                {
+                    e.PlaylistId,
+                    e.MusicId
+                });
                 entity.HasOne(e => e.Playlist)
                       .WithMany(p => p.PlaylistMusics)
                       .HasForeignKey(e => e.PlaylistId);
                 entity.HasOne(e => e.Music)
-                      .WithMany(m => m.PlaylistMusics)
-                      .HasForeignKey(e => e.MusicId);
+                                  .WithMany(m => m.PlaylistMusics)
+                                  .HasForeignKey(e => e.MusicId);
             });
 
             modelBuilder.Entity<UserFavoriteMusic>(entity =>

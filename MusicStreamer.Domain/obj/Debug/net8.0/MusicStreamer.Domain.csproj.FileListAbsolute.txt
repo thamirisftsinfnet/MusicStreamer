@@ -9,3 +9,4 @@ C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Doma
 C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\refint\MusicStreamer.Domain.dll
 C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Domain.pdb
 C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\ref\MusicStreamer.Domain.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Domain\obj\Debug\net8.0\MusicStreamer.Domain.sourcelink.json

@@ -94,3 +94,4 @@ C:\Infnet\MusicStreamer\MusicStreamer.WebAPI\bin\Debug\net8.0\MusicStreamer.Appl
 C:\Infnet\MusicStreamer\MusicStreamer.WebAPI\bin\Debug\net8.0\MusicStreamer.Data.pdb
 C:\Infnet\MusicStreamer\MusicStreamer.WebAPI\bin\Debug\net8.0\MusicStreamer.Domain.pdb
 C:\Infnet\MusicStreamer\MusicStreamer.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Infnet\MusicStreamer\MusicStreamer.WebAPI\obj\Debug\net8.0\MusicStreamer.WebAPI.sourcelink.json

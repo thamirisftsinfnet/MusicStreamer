@@ -65,6 +65,22 @@
   },
   {
     "ContainingType": "MusicStreamer.WebAPI.Controllers.BandController",
+    "Method": "GetFavoriteBandss",
+    "RelativePath": "api/bands/{userId}/favorites/bands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStreamer.WebAPI.Controllers.BandController",
     "Method": "Search",
     "RelativePath": "api/bands/search",
     "HttpMethod": "GET",
@@ -85,6 +101,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MusicStreamer.WebAPI.Controllers.CreditCardController",
+    "Method": "AddCard",
+    "RelativePath": "api/creditcards",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MusicStreamer.Application.DTOs.CreditCardDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStreamer.WebAPI.Controllers.CreditCardController",
+    "Method": "Delete",
+    "RelativePath": "api/creditcards/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStreamer.WebAPI.Controllers.CreditCardController",
+    "Method": "GetByUser",
+    "RelativePath": "api/creditcards/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MusicStreamer.WebAPI.Controllers.MusicController",
     "Method": "ToggleFavorite",
     "RelativePath": "api/musics/{id}/favorite",
@@ -94,6 +158,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStreamer.WebAPI.Controllers.MusicController",
+    "Method": "GetFavoriteMusics",
+    "RelativePath": "api/musics/{userId}/favorites/musics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -169,6 +249,38 @@
       {
         "Name": "dto",
         "Type": "MusicStreamer.Application.DTOs.CreateSubscriptionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStreamer.WebAPI.Controllers.TransactionsController",
+    "Method": "Authorize",
+    "RelativePath": "api/transactions/{id}/authorize",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStreamer.WebAPI.Controllers.TransactionsController",
+    "Method": "GetByUser",
+    "RelativePath": "api/transactions/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

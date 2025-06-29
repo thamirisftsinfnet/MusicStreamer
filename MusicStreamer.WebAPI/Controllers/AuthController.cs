@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using MusicStreamer.Application.AppServices;
 using MusicStreamer.Application.DTOs;
 using MusicStreamer.Application.Interfaces.AppServices;
+using MusicStreamer.Domain.Entities;
 
 namespace MusicStreamer.WebAPI.Controllers
 {
@@ -11,11 +12,13 @@ namespace MusicStreamer.WebAPI.Controllers
     {
         private readonly IUserService _userService;
         private readonly IAuthService _authService;
+        private readonly ISubscriptionService _subscriptionService;
 
-        public AuthController(IUserService userService, IAuthService authService)
+        public AuthController(IUserService userService, IAuthService authService, ISubscriptionService subscriptionService)
         {
             _userService = userService;
             _authService = authService;
+            _subscriptionService = subscriptionService;
         }
 
         [HttpPost("login")]
@@ -29,6 +32,20 @@ namespace MusicStreamer.WebAPI.Controllers
         {
             var user = await _userService.GetByIdAsync(userId);
             if (user == null) return NotFound("Usuário não encontrado.");
+            var dto = await _subscriptionService.GetUserSubscriptionAsync(user.Id);
+            if (dto != null)
+            {
+                user.Subscription = new Subscription
+                {
+                    Id = dto.Id,
+                    UserId = userId,
+                    PlanType = dto.PlanType,
+                    StartDate = dto.StartDate,
+                    EndDate = dto.EndDate,
+                    IsActive = dto.IsActive,
+                    MonthlyFee = dto.MonthlyFee
+                };
+            }
 
             var token = await _authService.RenewToken(user);
             return Ok(token);

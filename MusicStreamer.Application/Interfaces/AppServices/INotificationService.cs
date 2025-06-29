@@ -11,5 +11,6 @@ namespace MusicStreamer.Application.Interfaces.Services
     {
         Task SendTransactionNotificationAsync(Transaction transaction);
         Task SendWelcomeEmailAsync(User user);
+        Task SendTransactionPendenteNotificationAsync(Transaction transaction);
     }
 }

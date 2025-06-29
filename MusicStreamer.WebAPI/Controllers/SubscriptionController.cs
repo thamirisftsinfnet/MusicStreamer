@@ -22,19 +22,35 @@ namespace MusicStreamer.WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Subscribe([FromBody] CreateSubscriptionDto dto)
         {
-            var result = await _subscriptionService.CreateSubscriptionAsync(dto);
-            return Ok(result);
+            try
+            {
+                var result = await _subscriptionService.CreateSubscriptionAsync(dto);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [Authorize]
         [HttpPut("{userId}/plan")]
         public async Task<IActionResult> UpdatePlan(int userId, [FromBody] CreateSubscriptionDto dto)
         {
-            if (userId != dto.UserId)
-                return BadRequest("O ID da URL não corresponde ao do corpo da requisição.");
+            try
+            {
+                if (userId != dto.UserId)
+                    return BadRequest("O ID da URL não corresponde ao do corpo da requisição.");
 
-            var updated = await _subscriptionService.UpdateSubscriptionPlanAsync(dto.UserId, dto.PlanType);
-            return Ok(updated);
+                var updated = await _subscriptionService.UpdateSubscriptionPlanAsync(dto.UserId, dto.PlanType);
+                return Ok(updated);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [Authorize]

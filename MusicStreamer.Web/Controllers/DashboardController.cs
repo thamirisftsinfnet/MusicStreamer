@@ -36,40 +36,33 @@ namespace MusicStreamer.Web.Controllers
             model.IsSubscriptionActive = active;
 
             var musicRes = await _httpClient.GetAsync($"/api/musics/{userId}/favorites/musics");
-            var bandRes = await _httpClient.GetAsync($"/api/bands/{userId}/favorites/bands");
-
             if (musicRes.IsSuccessStatusCode)
             {
                 var musicJson = await musicRes.Content.ReadAsStringAsync();
                 model.FavoriteMusics = JsonSerializer.Deserialize<List<MusicDto>>(musicJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
             }
 
+            var bandRes = await _httpClient.GetAsync($"/api/bands/{userId}/favorites/bands");
             if (bandRes.IsSuccessStatusCode)
             {
                 var bandJson = await bandRes.Content.ReadAsStringAsync();
                 model.FavoriteBands = JsonSerializer.Deserialize<List<BandDto>>(bandJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
             }
 
+            var txRes = await _httpClient.GetAsync($"/api/transactions/user/{userId}");
+            if (txRes.IsSuccessStatusCode)
+            {
+                var txJson = await txRes.Content.ReadAsStringAsync();
+                var allTx = JsonSerializer.Deserialize<List<TransactionListItemViewModel>>(txJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+                model.PendingTransactions = allTx
+                    .Where(tx => tx.Status == "Pending")
+                    .OrderByDescending(tx => tx.CreatedAt)
+                    .Take(3)
+                    .ToList();
+            }
+
             return View(model);
         }
-    }
-
-    public static class JwtHelper
-    {
-        public static string GetUserIdFromToken(string token) => GetClaim(token, "userId") ?? "0";
-        public static string GetFirstNameFromToken(string token) => GetClaim(token, "firstName") ?? "Usuário";
-
-        public static string? GetClaim(string token, string claimName)
-        {
-            var jwt = token.Split('.')[1];
-            var json = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(PadBase64(jwt)));
-            var doc = JsonDocument.Parse(json);
-            if (doc.RootElement.TryGetProperty(claimName, out var value))
-                return value.GetString();
-            return null;
-        }
-
-        private static string PadBase64(string base64) =>
-            base64.Length % 4 == 0 ? base64 : base64.PadRight(base64.Length + (4 - base64.Length % 4), '=');
+       
     }
 }

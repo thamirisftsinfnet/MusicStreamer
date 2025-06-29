@@ -34,7 +34,7 @@ namespace MusicStreamer.WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest(ex.Message);
             }
         }
     }

@@ -19,23 +19,47 @@ namespace MusicStreamer.WebAPI.Controllers
         [HttpGet("search")]
         public async Task<IActionResult> Search([FromQuery] int userId, [FromQuery] string? term = null)
         {
-            var result = await _musicService.SearchMusicAsync(term, userId);
-            return Ok(result);
+            try
+            {
+                var result = await _musicService.SearchMusicAsync(term, userId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+           
         }
 
         [Authorize]
         [HttpPost("{id}/favorite")]
         public async Task<IActionResult> ToggleFavorite(int id)
         {
-            int userId = int.Parse(User.FindFirst("userId").Value);
-            await _musicService.ToggleFavoriteAsync(id, userId);
-            return NoContent();
+            try
+            {
+                int userId = int.Parse(User.FindFirst("userId").Value);
+                await _musicService.ToggleFavoriteAsync(id, userId);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+           
         }
         [HttpGet("{userId}/favorites/musics")]
         public async Task<IActionResult> GetFavoriteMusics(int userId)
         {
-            var favorites = await _musicService.GetUserFavoritesAsync(userId);
-            return Ok(favorites);
+            try
+            {
+                var favorites = await _musicService.GetUserFavoritesAsync(userId);
+                return Ok(favorites);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+         
         }
     }
 }
