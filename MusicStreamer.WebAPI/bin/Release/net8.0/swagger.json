@@ -1,0 +1,539 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "MusicStreamer API",
+    "description": "API para streaming de música com sistema de assinaturas",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/LoginDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/renew": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "userId",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/bands/search": {
+      "get": {
+        "tags": [
+          "Band"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "userId",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "term",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/bands/{id}/favorite": {
+      "post": {
+        "tags": [
+          "Band"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Band"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/bands/{userId}/favorites/bands": {
+      "get": {
+        "tags": [
+          "Band"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/creditcards/user/{userId}": {
+      "get": {
+        "tags": [
+          "CreditCard"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/creditcards": {
+      "post": {
+        "tags": [
+          "CreditCard"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreditCardDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/creditcards/{id}": {
+      "delete": {
+        "tags": [
+          "CreditCard"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/musics/search": {
+      "get": {
+        "tags": [
+          "Music"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "userId",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "term",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/musics/{id}/favorite": {
+      "post": {
+        "tags": [
+          "Music"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/musics/{userId}/favorites/musics": {
+      "get": {
+        "tags": [
+          "Music"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/subscriptions": {
+      "post": {
+        "tags": [
+          "Subscription"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateSubscriptionDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/subscriptions/{userId}/plan": {
+      "put": {
+        "tags": [
+          "Subscription"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateSubscriptionDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/subscriptions/{userId}": {
+      "delete": {
+        "tags": [
+          "Subscription"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/transactions/{id}/authorize": {
+      "post": {
+        "tags": [
+          "Transactions"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/transactions/user/{userId}": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/users": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateUserDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreateSubscriptionDto": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "planType": {
+          "$ref": "#/definitions/SubscriptionPlanType"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateUserDto": {
+      "required": [
+        "email",
+        "firstName",
+        "lastName",
+        "password"
+      ],
+      "type": "object",
+      "properties": {
+        "email": {
+          "format": "email",
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "minLength": 6,
+          "type": "string"
+        },
+        "firstName": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "lastName": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreditCardDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cardHolderName": {
+          "type": "string"
+        },
+        "numberMasked": {
+          "type": "string"
+        },
+        "expiration": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "LoginDto": {
+      "required": [
+        "email",
+        "password"
+      ],
+      "type": "object",
+      "properties": {
+        "email": {
+          "format": "email",
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SubscriptionPlanType": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2
+      ],
+      "type": "integer"
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "JWT Authorization header usando Bearer scheme. Exemplo: \"Authorization: Bearer {token}\""
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

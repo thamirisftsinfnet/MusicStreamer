@@ -68,7 +68,8 @@ namespace MusicStreamer.Web.Controllers
 
             if (!response.IsSuccessStatusCode)
             {
-                TempData["Error"] = response.StatusCode + "Erro ao registrar usuário";
+                var errorMessage = await response.Content.ReadAsStringAsync();
+                TempData["Error"] = $"Erro: {errorMessage}";
                 return View(model);
             }
             TempData["OK"] = "Operação realizada com sucesso";

@@ -15,7 +15,10 @@ namespace MusicStreamer.Data.Repositories
         public UserFavoriteBandRepository(MusicStreamerContext context) : base(context)
         {
         }
-
+        public async Task<IEnumerable<UserFavoriteBand>> GetIdUserAsync(int userId)
+        {
+            return await _dbSet.Where(ufm => ufm.UserId == userId).ToListAsync();
+        }
         public async Task<bool> IsFavoriteAsync(int userId, int bandId)
         {
             return await _dbSet.AnyAsync(ufb => ufb.UserId == userId && ufb.BandId == bandId);

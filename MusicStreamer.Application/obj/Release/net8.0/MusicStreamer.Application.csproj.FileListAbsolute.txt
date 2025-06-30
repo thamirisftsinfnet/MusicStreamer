@@ -1,0 +1,16 @@
+C:\Infnet\MusicStreamer\MusicStreamer.Application\bin\Release\net8.0\MusicStreamer.Application.deps.json
+C:\Infnet\MusicStreamer\MusicStreamer.Application\bin\Release\net8.0\MusicStreamer.Application.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Application\bin\Release\net8.0\MusicStreamer.Application.pdb
+C:\Infnet\MusicStreamer\MusicStreamer.Application\bin\Release\net8.0\MusicStreamer.Domain.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Application\bin\Release\net8.0\MusicStreamer.Domain.pdb
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStreamer.Application.csproj.AssemblyReference.cache
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStreamer.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStreamer.Application.AssemblyInfoInputs.cache
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStreamer.Application.AssemblyInfo.cs
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStreamer.Application.csproj.CoreCompileInputs.cache
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStreamer.Application.sourcelink.json
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStr.05836FA4.Up2Date
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStreamer.Application.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\refint\MusicStreamer.Application.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\MusicStreamer.Application.pdb
+C:\Infnet\MusicStreamer\MusicStreamer.Application\obj\Release\net8.0\ref\MusicStreamer.Application.dll

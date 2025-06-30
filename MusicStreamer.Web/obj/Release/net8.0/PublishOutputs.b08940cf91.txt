@@ -1,0 +1,7 @@
+C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Release\net8.0\PubTmp\Out\MusicStreamer.Web.exe
+C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Release\net8.0\PubTmp\Out\MusicStreamer.Web.dll
+C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Release\net8.0\PubTmp\Out\MusicStreamer.Web.deps.json
+C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Release\net8.0\PubTmp\Out\MusicStreamer.Web.runtimeconfig.json
+C:\Infnet\MusicStreamer\MusicStreamer.Web\obj\Release\net8.0\PubTmp\Out\MusicStreamer.Web.pdb

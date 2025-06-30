@@ -12,5 +12,6 @@ namespace MusicStreamer.Domain.Interfaces.Repositories
         Task<bool> IsFavoriteAsync(int userId, int bandId);
         Task AddFavoriteAsync(int userId, int bandId);
         Task RemoveFavoriteAsync(int userId, int bandId);
+        Task<IEnumerable<UserFavoriteBand>> GetIdUserAsync(int userId);
     }
 }

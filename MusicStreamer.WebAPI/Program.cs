@@ -106,6 +106,8 @@ builder.Services.AddScoped<IUserFavoriteBandRepository, UserFavoriteBandReposito
 builder.Services.AddScoped<IAlbumRepository, AlbumRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 builder.Services.AddScoped<ICreditCardRepository, CreditCardRepository>();
+builder.Services.AddScoped<IUserFavoriteMusicRepository, UserFavoriteMusicRepository>();
+
 
 // Service Registration
 builder.Services.AddScoped<IAuthService, AuthService>();

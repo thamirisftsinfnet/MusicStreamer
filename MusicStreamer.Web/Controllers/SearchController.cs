@@ -72,18 +72,8 @@ namespace MusicStreamer.Web.Controllers
             var token = HttpContext.Session.GetString("JWT");
             if (string.IsNullOrEmpty(token)) return RedirectToAction("Login", "Account");
 
-            var userId = JwtHelper.GetUserIdFromToken(token);
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-            var band = (await _httpClient.GetAsync($"/api/bands/search?term=&userId={userId}"))
-                            .Content.ReadAsStringAsync().Result;
-
-            var isFav = JsonSerializer.Deserialize<List<BandResult>>(band)?.FirstOrDefault(b => b.Id == bandId)?.IsFavorite ?? false;
-
-            if (isFav)
-                await _httpClient.DeleteAsync($"/api/bands/{bandId}/favorite");
-            else
-                await _httpClient.PostAsync($"/api/bands/{bandId}/favorite", null);
+            await _httpClient.PostAsync($"/api/bands/{bandId}/favorite", null);
 
             return RedirectToAction("Index", new { term = Request.Query["term"] });
         }

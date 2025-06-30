@@ -107,7 +107,35 @@ namespace MusicStreamer.Application.AppServices
                 }).ToList() ?? new List<AlbumDto>()
             });
         }
+        public async Task ToggleFavoriteAsync(int bandId, int userId)
+        {
+            var user = await _userRepository.GetByIdAsync(userId);
+            var music = await _bandRepository.GetByIdAsync(bandId);
 
+            if (user == null || music == null)
+                throw new InvalidOperationException("Usuário ou música não encontrados");
+
+            var userFavoriteBands = await _userFavoriteBandRepository.GetIdUserAsync(userId);
+            user.FavoriteBands = userFavoriteBands.ToList();
+
+            var existingFavorite = user.FavoriteBands.FirstOrDefault(f => f.BandId == bandId);
+
+            if (existingFavorite != null)
+            {
+                user.FavoriteBands.Remove(existingFavorite);
+            }
+            else
+            {
+                user.FavoriteBands.Add(new UserFavoriteBand
+                {
+                    UserId = userId,
+                    BandId = bandId,
+                    FavoritedAt = DateTime.UtcNow
+                });
+            }
+
+            await _unitOfWork.CommitAsync();
+        }
         public async Task AddToFavoritesAsync(int userId, int bandId)
         {
             var band = await _bandRepository.GetByIdAsync(bandId);

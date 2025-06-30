@@ -16,5 +16,6 @@ namespace MusicStreamer.Application.Interfaces.AppServices
         Task RemoveFromFavoritesAsync(int userId, int bandId);
         Task<BandDto> CreateBandAsync(BandDto createBandDto);
         Task<BandDto> UpdateBandAsync(int bandId, BandDto updateBandDto);
+        Task ToggleFavoriteAsync(int bandId, int userId);
     }
 }

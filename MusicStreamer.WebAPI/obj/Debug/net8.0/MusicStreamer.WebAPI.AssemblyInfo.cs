@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MusicStreamer.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2ebec342ab7d9d56981a101898c1934a7a1a9bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3284916db525ce57664bf4ad59575815961a7687")]
 [assembly: System.Reflection.AssemblyProductAttribute("MusicStreamer.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MusicStreamer.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

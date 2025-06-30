@@ -18,17 +18,20 @@ namespace MusicStreamer.Application.AppServices
         private readonly IAlbumRepository _albumRepository;
         private readonly IBandRepository _bandRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IUserFavoriteMusicRepository _userFavoriteMusicRepository;
 
         public MusicService(
             IMusicRepository musicRepository,
             IUserRepository userRepository,
-            IUnitOfWork unitOfWork, IAlbumRepository albumRepository, IBandRepository bandRepository)
+            IUnitOfWork unitOfWork, IAlbumRepository albumRepository, IBandRepository bandRepository,
+            IUserFavoriteMusicRepository userFavoriteMusicRepository)
         {
             _musicRepository = musicRepository;
             _userRepository = userRepository;
             _unitOfWork = unitOfWork;
             _albumRepository = albumRepository;
             _bandRepository = bandRepository;
+            _userFavoriteMusicRepository = userFavoriteMusicRepository;
         }
 
         public async Task<IEnumerable<MusicSearchDto>> SearchMusicAsync(string searchTerm, int userId)
@@ -104,11 +107,14 @@ namespace MusicStreamer.Application.AppServices
             if (user == null || music == null)
                 throw new InvalidOperationException("Usuário ou música não encontrados");
 
+            var userFavoriteMusics = await _userFavoriteMusicRepository.GetIdUserAsync(userId);
+            user.FavoriteMusics = userFavoriteMusics.ToList(); 
+
             var existingFavorite = user.FavoriteMusics.FirstOrDefault(f => f.MusicId == musicId);
 
             if (existingFavorite != null)
             {
-                user.FavoriteMusics.Remove(existingFavorite);
+                user.FavoriteMusics.Remove(existingFavorite); 
             }
             else
             {

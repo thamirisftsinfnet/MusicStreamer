@@ -30,7 +30,7 @@ namespace MusicStreamer.WebAPI.Controllers
             try
             {
                 int userId = int.Parse(User.FindFirst("userId").Value);
-                await _bandService.AddToFavoritesAsync(userId, id);
+                await _bandService.ToggleFavoriteAsync(userId, id);
                 return NoContent();
             }
             catch (Exception ex)
@@ -40,22 +40,6 @@ namespace MusicStreamer.WebAPI.Controllers
          
         }
 
-        [Authorize]
-        [HttpDelete("{id}/favorite")]
-        public async Task<IActionResult> Unfavorite(int id)
-        {
-            try
-            {
-                int userId = int.Parse(User.FindFirst("userId").Value);
-                await _bandService.RemoveFromFavoritesAsync(userId, id);
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-          
-        }
         [HttpGet("{userId}/favorites/bands")]
         public async Task<IActionResult> GetFavoriteBandss(int userId)
         {
